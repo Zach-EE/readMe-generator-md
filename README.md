@@ -1,2 +1,2 @@
 # readMe-generator-md
-A CLI user input readme.md generatort
+A CLI user input readme.md generator
