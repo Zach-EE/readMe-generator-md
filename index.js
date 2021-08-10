@@ -18,8 +18,104 @@ const questions = [
                 return false;
             }
 
+        },
+    },
+    // 2:Project Description
+    {
+
+        type: 'input',
+        name: 'description',
+        message: 'Enter project description',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            }else {
+                console.log('Project description required');
+                return false;
+            }
+
+        }
+    },
+     // 3: Project Usage
+    {
+
+        type: 'input',
+        name: 'usage',
+        message: 'Enter usage permissions for application',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            }else {
+                console.log('Project usage required');
+                return false;
+            }
+
+        }
+    },  
+     // n: Place holder
+     {
+
+        type: 'input',
+        name: 'placeHolder',
+        message: 'place holder msg',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            }else {
+                console.log('Project placeHolder required');
+                return false;
+            }
+
+        }
+    },      
+     // n: Place holder
+     {
+
+        type: 'input',
+        name: 'placeHolder',
+        message: 'place holder msg',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            }else {
+                console.log('Project placeHolder required');
+                return false;
+            }
+
+        }
+    },   
+     // n: Place holder
+     {
+
+        type: 'input',
+        name: 'placeHolder',
+        message: 'place holder msg',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            }else {
+                console.log('Project placeHolder required');
+                return false;
+            }
+
         }
     }
+    //  // n: Place holder
+    //  {
+
+    //     type: 'input',
+    //     name: 'placeHolder',
+    //     message: 'place holder msg',
+    //     validate: usageInput => {
+    //         if (usageInput) {
+    //             return true;
+    //         }else {
+    //             console.log('Project placeHolder required');
+    //             return false;
+    //         }
+
+    //     }
+    // }                    
 ];
 
 // TODO: Create a function to write README file
