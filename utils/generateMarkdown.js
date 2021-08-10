@@ -17,11 +17,22 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
-  ## Installation
+  ## Installation Instructions
   ${data.installation}
 
-  ## License
+  ## Usage Information
+  ${data.usage}
+  
+  ## Contribution Guidelines
+  ${data.contribution}
+
+    ## Test Instructions
+  ${data.test}
+
+  ## License 
   ${data.licensing}
+
+
 
 `;
 }
