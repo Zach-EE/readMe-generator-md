@@ -25,7 +25,7 @@ const questions = [
 
         type: 'input',
         name: 'description',
-        message: 'Enter project description',
+        message: 'Enter description for application: ',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -36,70 +36,87 @@ const questions = [
 
         }
     },
-     // 3: Project Usage
+     // 3: Installation Information
     {
 
         type: 'input',
-        name: 'usage',
-        message: 'Enter usage permissions for application',
-        validate: usageInput => {
-            if (usageInput) {
+        name: 'installation',
+        message: 'Enter installation instructions for application: ',
+        validate: installationInput => {
+            if (installationInput) {
                 return true;
             }else {
-                console.log('Project usage required');
+                console.log('Installation guide required');
                 return false;
             }
 
         }
     },  
-     // n: Place holder
+     // 4: Usage Data
      {
 
         type: 'input',
-        name: 'placeHolder',
-        message: 'place holder msg',
+        name: 'usage',
+        message: 'Enter usage for application: ',
         validate: usageInput => {
             if (usageInput) {
                 return true;
             }else {
-                console.log('Project placeHolder required');
+                console.log('Enter BLANK for empty');
                 return false;
             }
 
         }
     },      
-     // n: Place holder
+     // 5: Contribution Guidelines
      {
 
         type: 'input',
-        name: 'placeHolder',
-        message: 'place holder msg',
-        validate: usageInput => {
-            if (usageInput) {
+        name: 'contribution',
+        message: 'Enter contribution guidelines for application: ',
+        validate: contributionInput => {
+            if (contributionInput) {
                 return true;
             }else {
-                console.log('Project placeHolder required');
+                console.log('Enter BLANK for empty');
                 return false;
             }
 
         }
     },   
-     // n: Place holder
+     // 6: Testing Steps
      {
 
         type: 'input',
-        name: 'placeHolder',
-        message: 'place holder msg',
-        validate: usageInput => {
-            if (usageInput) {
+        name: 'test',
+        message: 'Enter application testing steps: ',
+        validate: testInput => {
+            if (testInput) {
                 return true;
             }else {
-                console.log('Project placeHolder required');
+                console.log('Enter BLANK if left empty');
                 return false;
             }
 
         }
+    },
+    // 7: License Information
+    {
+
+    type: 'input',
+    name: 'license',
+    message: 'Enter creative license for application: ',
+    validate: licenseInput => {
+        if (licenseInput) {
+            return true;
+        }else {
+            console.log('License selection is required');
+            return false;
+        }
+
     }
+} 
+
     //  // n: Place holder
     //  {
 
@@ -118,7 +135,7 @@ const questions = [
     // }                    
 ];
 
-// TODO: Create a function to write README file
+//* Function to write data to a desired file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
@@ -126,7 +143,7 @@ function writeToFile(fileName, data) {
     });
 };
 
-// TODO: Create a function to initialize app
+// * Application initialization function
 function init() {
     inquirer.prompt(questions).then((userInput) => {
         console.log(`input: ${userInput}`);
