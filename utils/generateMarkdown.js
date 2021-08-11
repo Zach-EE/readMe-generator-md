@@ -37,7 +37,7 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## License 
-  ${data.licensing}
+  ${data.license}
 
   ## Questions? Contact: 
   ${data.email}
