@@ -5,6 +5,38 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
+    // Developer Email
+    {
+
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email: ',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            }else {
+                console.log('Enter None or Email');
+                return false;
+            }
+    
+        }
+    }, 
+    // Developer Github
+    {
+
+        type: 'input',
+        name: 'github',
+        message: 'Enter your Github username: ',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            }else {
+                console.log('Enter None or Username');
+                return false;
+            }
+    
+        }
+    },
     // 1: Project Title
     {
         type: 'input',
@@ -25,7 +57,7 @@ const questions = [
 
         type: 'input',
         name: 'description',
-        message: 'Enter description for application: ',
+        message: 'Enter description for project: ',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -41,7 +73,7 @@ const questions = [
 
         type: 'input',
         name: 'installation',
-        message: 'Enter installation instructions for application: ',
+        message: 'Enter installation instructions for project: ',
         validate: installationInput => {
             if (installationInput) {
                 return true;
@@ -57,7 +89,7 @@ const questions = [
 
         type: 'input',
         name: 'usage',
-        message: 'Enter usage for application: ',
+        message: 'Enter usage instructions for project: ',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -73,7 +105,7 @@ const questions = [
 
         type: 'input',
         name: 'contribution',
-        message: 'Enter contribution guidelines for application: ',
+        message: 'Enter contribution guidelines for project: ',
         validate: contributionInput => {
             if (contributionInput) {
                 return true;
@@ -89,12 +121,12 @@ const questions = [
 
         type: 'input',
         name: 'test',
-        message: 'Enter application testing steps: ',
+        message: 'Enter application testing project: ',
         validate: testInput => {
             if (testInput) {
                 return true;
             }else {
-                console.log('Enter None if left empty');
+                console.log('Testing Steps Required');
                 return false;
             }
 
@@ -105,7 +137,7 @@ const questions = [
 
     type: 'checkbox',
     name: 'license',
-    message: 'Enter creative license for application: ',
+    message: 'Enter creative license for project: ',
     choices: ['Apache','MIT','Mozilla-Public','None'],
     validate: licenseInput => {
         if (licenseInput) {
@@ -116,39 +148,7 @@ const questions = [
         }
 
     }
-    }, 
-    // 8: Email
-    {
-
-    type: 'input',
-    name: 'email',
-    message: 'Enter your email: ',
-    validate: emailInput => {
-        if (emailInput) {
-            return true;
-        }else {
-            console.log('');
-            return false;
-        }
-
     }
-    },   
-    // 8: Github
-    {
-
-    type: 'input',
-    name: 'github',
-    message: 'Enter your Github username: ',
-    validate: githubInput => {
-        if (githubInput) {
-            return true;
-        }else {
-            console.log('');
-            return false;
-        }
-
-    }
-    }   
     //  // n: Place holder
     //  {
 
