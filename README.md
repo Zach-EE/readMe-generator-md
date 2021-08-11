@@ -7,7 +7,7 @@
 * [Contact](#contact)
 
 ## Description
-* [![Watch the video]('./demo/exampleREADME.gif')]
+* ![til](./demo/exampleREADME.gif)
 * This application allows a user to quickly generate a README.md file for a project from the CLI in project root folder.
 
 ## Installation
