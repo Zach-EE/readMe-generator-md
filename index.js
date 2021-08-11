@@ -62,7 +62,7 @@ const questions = [
             if (usageInput) {
                 return true;
             }else {
-                console.log('Enter BLANK for empty');
+                console.log('Enter None for empty');
                 return false;
             }
 
@@ -78,7 +78,7 @@ const questions = [
             if (contributionInput) {
                 return true;
             }else {
-                console.log('Enter BLANK for empty');
+                console.log('Enter None for empty');
                 return false;
             }
 
@@ -94,7 +94,7 @@ const questions = [
             if (testInput) {
                 return true;
             }else {
-                console.log('Enter BLANK if left empty');
+                console.log('Enter None if left empty');
                 return false;
             }
 
@@ -103,9 +103,10 @@ const questions = [
     // 7: License Information
     {
 
-    type: 'input',
+    type: 'checkbox',
     name: 'license',
     message: 'Enter creative license for application: ',
+    choices: ['Apache','MIT','Mozilla-Public','None'],
     validate: licenseInput => {
         if (licenseInput) {
             return true;
@@ -115,8 +116,39 @@ const questions = [
         }
 
     }
-} 
+    }, 
+    // 8: Email
+    {
 
+    type: 'input',
+    name: 'email',
+    message: 'Enter your email: ',
+    validate: emailInput => {
+        if (emailInput) {
+            return true;
+        }else {
+            console.log('');
+            return false;
+        }
+
+    }
+    },   
+    // 8: Github
+    {
+
+    type: 'input',
+    name: 'github',
+    message: 'Enter your Github username: ',
+    validate: githubInput => {
+        if (githubInput) {
+            return true;
+        }else {
+            console.log('');
+            return false;
+        }
+
+    }
+    }   
     //  // n: Place holder
     //  {
 
