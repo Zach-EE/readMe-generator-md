@@ -1,33 +1,25 @@
-# Your Project Title
+# readMe-Generator-md
 
-  ## Table of Contents
-  - [Description](#description)
-  - [Usage Information](#usage)
-  - [Contribution Guidelines](#contribution)
-  - [Test Instructions](#test)
-  - [Contact](#email)
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contact](#contact)
 
-  ## Description
-  Descrtiption Descriptive
+## Description
+* [![Watch the video]('./demo/exampleREADME.gif')]
+* This application allows a user to quickly generate a README.md file for a project from the CLI in project root folder.
 
-  ## Installation Instructions
-  test
+## Installation
+* Install node.js
+* run 'npm install' in root folder
+* initiate and run 'node index.js' in root folder
 
-  ## Usage Information
-  test
-  
-  ## Contribution Guidelines
-  test 1
+## Usage
+* Follow installation instructions
+* Answer application questions
+* Data will automatically be filled into README.md file for later use
 
-    ## Test Instructions
-   terte
-
-  ## License 
-  Apache
-  [![license](https://img.shields.io/badge/license-Apache-blue)](https://shields.io)
-
-  ## Questions? Contact: 
-  - Email: youremail@gmail.com
-  - Github: Zach-EE
-
-
+## Contact
+email: 
+github: Zach-EE
